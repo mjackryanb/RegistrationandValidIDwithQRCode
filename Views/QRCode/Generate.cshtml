@@ -1,0 +1,23 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<body>
+    <img src="~/assets/img/ntc-main.png" style="display: block; margin-left: auto; margin-right: auto;">
+
+    <h1 style="text-align: center; color: black; font-family: 'Century Gothic'">This is your QR code for visiting National Teachers College</h1>
+    
+            @if (!string.IsNullOrEmpty(ViewBag.QRCodeFileName))
+            {
+            <br />
+            <p style="text-align: center"><img src="~/QRCode/@ViewBag.QRCodeFileName" alt="QR Code"></p>
+            <br />
+            }
+
+    <p style="text-align: center; color: black; font-family: 'Century Gothic'">Download the QR code and scan it in the kiosk to verify your visit</p>
+
+</body>
+</html>
+
